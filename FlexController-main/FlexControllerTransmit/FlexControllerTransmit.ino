@@ -66,5 +66,15 @@ void print_packet() {
 // Function to receive the EMG values and compute whether muscle is flexed
 void emg_input() {
   // read the input from the analog pin 0
- pkt.flex = (int) random(0,2);
+  /**
+  int sensorValue = analogRead(A0);
+
+  if (sensorValue > 200) {
+    pkt.flex = true;
+  }
+  else {
+    pkt.flex = false;
+  }
+  */
+  pkt.flex = 10;
 }
