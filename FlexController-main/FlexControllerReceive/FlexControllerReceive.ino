@@ -62,6 +62,9 @@ int position_grid[2][16] = {
 
 //Character Row Position for Easier Access
 int character_position = 0;
+
+//Score
+int score = 0;
  
 void setup() {
   
@@ -186,12 +189,17 @@ void create_game() {
 void move_spikes() {
   
    //collision detection
-  if ((position_grid[0][1] == 1 && character_position == 0) || (position_grid[1][1] == 0 && character_position == 1)) {
+  if ((position_grid[0][1] == 1 && character_position == 0) || (position_grid[1][1] == 1 && character_position == 1)) {
     
     lcd.clear();
     lcd.print("GAME OVER");
+    lcd.setCursor(0,1);
+    lcd.print("Score:");
+    lcd.setCursor(6,1);
+    lcd.print(score);
+    score = 0;
     
-    //delay(5000);
+    delay(5000);
     
   }
   else {
@@ -237,5 +245,7 @@ void move_spikes() {
     }
     
   }
+
+  score++;
   
 }
