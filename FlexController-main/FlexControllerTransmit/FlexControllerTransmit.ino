@@ -42,7 +42,7 @@ void loop() {
   bluetooth_transmit();  
 
   // Necessary forced delay
-  delay(1);
+  delay(1000);
 }
 
 // Function responsible for transmitting data over bluetooth
@@ -66,5 +66,12 @@ void print_packet() {
 // Function to receive the EMG values and compute whether muscle is flexed
 void emg_input() {
   // read the input from the analog pin 0
- pkt.flex = (int) random(0, 2);
+  int sensorValue = analogRead(A0);
+
+  if(sensorValue > 400) {
+    pkt.flex = 1;
+  }
+  else {
+    pkt.flex = 0;
+  }
 }
