@@ -42,7 +42,7 @@ void loop() {
   bluetooth_transmit();  
 
   // Necessary forced delay
-  delay(1000);
+  delay(2000);
 }
 
 // Function responsible for transmitting data over bluetooth
