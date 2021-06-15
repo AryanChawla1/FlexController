@@ -95,7 +95,7 @@ void loop() {
   bluetooth_receive();  
 
   // Necessary forced delay
-  delay(1000);
+  delay(2000);
 
   //move the spikes
   move_spikes();
@@ -126,7 +126,7 @@ void bluetooth_receive() {
 void check_change() {
 
   //is muscle flexed? If so change positions for variables
-  if (pkt.flex == 1) {
+  if (pkt.flex >= 1) {
     
     if (character_position == 0) {
       
