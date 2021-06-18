@@ -2,16 +2,10 @@
  * @Author: Aryan Chawla
  * @Name: FlexControllerTransmit
  * 
- * @Function: Transmit data in form of boolean from Analog Input EMG sensor to
+ * @Function: Transmit data in form of integer from Analog Input EMG sensor to
  * the Receiver MicroController
- * 
- * @Note: Proper values for EMG needed
  */
  
-// Transmitting data in form of boolean in the form of a struct to receiver
-// Writes (hardcoded) data to the software UART and prints the transmitted packet
-
-
 // Library to make a Software UART
 #include <SoftwareSerial.h>
 
