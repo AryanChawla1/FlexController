@@ -1,9 +1,9 @@
 /*
- * @Author: Aryan Chawla
- * @Name: FlexControllerReceive
+ * Author: Aryan Chawla
+ * Name: FlexControllerReceive
  * 
- * @Function: Receive data in form of boolean from other HM-10 Sensor
- *            It also has the LCD for the game code
+ * Function: Receive data in form of boolean from other HM-10 Sensor
+ *           and reflects change onto the LCD game
  * 
  */
 
@@ -245,7 +245,8 @@ void move_spikes() {
     }
     
   }
-
+  
+  //keeps track of code
   score++;
   
 }
