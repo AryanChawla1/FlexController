@@ -4,7 +4,7 @@
  
  description: File was used to setup the EMG Sensor
 */
-
+//TEST IF IT WORKS
 void setup() {
   // initialize serial communication at 9600 bits per second:
   Serial.begin(9600);
@@ -15,5 +15,5 @@ void loop() {
   int sensorValue = analogRead(A0);
   // print out the value you read:
   Serial.println(sensorValue);
-  delay(100);        // delay in between reads
+  delay(150);        // delay in between reads
 }
